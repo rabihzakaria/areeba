@@ -32,7 +32,7 @@ public class CustomerService {
 		customerDAO.update(updatedCustomer);
 	}
 
-	public void deleteCustomer(Customer customer) {
-		customerDAO.delete(customer);
+	public void deleteCustomer(long id) {
+		customerDAO.delete(id);
 	}
 }

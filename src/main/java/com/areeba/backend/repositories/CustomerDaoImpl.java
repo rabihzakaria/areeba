@@ -20,8 +20,10 @@ public class CustomerDaoImpl implements CustomerDao {
 		 return entity;
 	}
     @Transactional
-	@Override public void delete(Customer entity) {
-			entityManager.remove(entity);
+	@Override  public void delete(Long id) {
+		entityManager.createQuery("DELETE FROM Customer c WHERE c.id = :id")
+				.setParameter("id", id)
+				.executeUpdate();
 	}
 
 	@Override public Customer getCustomerById(Long id) {

@@ -17,27 +17,29 @@
 			this.customerService = customerService;
 		}
 
+		@CrossOrigin
 		@GetMapping("/all")
 		public List<Customer> getAllCustomers() {
 			return customerService.getAllCustomers();
 		}
-
+		@CrossOrigin
 		@GetMapping("/{id}")
 		public Customer getCustomerById(@PathVariable Long id) {
-			return customerService.getCustomerById(id);
+					return customerService.getCustomerById(id);
 		}
+		@CrossOrigin
 		@PostMapping("/add")
 		public void addCustomer(@RequestBody Customer customer) {
 			customerService.addCustomer(customer);
 		}
-
+		@CrossOrigin
 		@PutMapping("/update")
 		public void updateCustomer(@RequestBody Customer updatedCustomer) {
 			customerService.updateCustomer(updatedCustomer);
 		}
-
-		@DeleteMapping("/delete")
-		public void deleteCustomer(@RequestBody Customer customer) {
-			customerService.deleteCustomer(customer);
+		@CrossOrigin(origins = "http://localhost:3000")
+		@DeleteMapping("/delete/{id}")
+		public void deleteCustomer(@PathVariable Long id) {
+			customerService.deleteCustomer(id);
 		}
 	}

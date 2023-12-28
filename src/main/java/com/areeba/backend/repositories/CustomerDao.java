@@ -8,7 +8,7 @@ public interface CustomerDao {
 
     Customer addNew(Customer entity);
 
-	void delete(Customer entity);
+	void delete(Long id);
 
 	Customer getCustomerById(Long id);
 

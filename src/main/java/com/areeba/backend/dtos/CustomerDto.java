@@ -19,6 +19,7 @@ public class CustomerDto implements Serializable {
 	private String email;
 	private String phoneNumber;
 	private String countryCode;
+	private String operator;
 
 
 	public static CustomerDto fromCustomer(Customer customer) {

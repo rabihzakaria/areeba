@@ -13,5 +13,6 @@ CREATE TABLE customer (
                           last_name VARCHAR(255) NOT NULL,
                           email VARCHAR(255) NOT NULL,
                           phone_number VARCHAR(20),
+                          operator VARCHAR(250) NOT NULL,
                           country_code VARCHAR(5)
 );
