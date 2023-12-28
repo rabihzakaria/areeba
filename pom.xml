@@ -13,9 +13,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend</name>
 	<description>backend for areeba task</description>
+	<packaging>jar</packaging>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 		<skipTests>true</skipTests>
+
 	</properties>
 	<dependencies>
 	<dependency>
